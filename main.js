@@ -1,19 +1,27 @@
 function tocaSomPom(idElementoAudio){
   document.querySelector (idElementoAudio).play();
 }
-
-
     const listaDeTeclas = document.querySelectorA11('.tecla');
+    
 
-    let contador = 0;
-    //Estrutura de reptição - Enquanto
-      listaDeTeclas[0].onclick = tocaSomPom;
+      for( let contador = 0; <listaDeTeclas.length;contador++){
+           const tecla = listaDeTeclas[contador];
+           const instrumento = tecla.ClassList[1]
+           const idAudio = `#som_${instrumento}`;
+           console.log(idAudio);
+          console.log(instrumento);
 
-      while(contador <listaDeTeclas.length){
-           listaDReTeclas[contador].onclick = function(){
-            tocaSom('#_tecla_splash');
-           };
-           contador= contador + 1;
+          tecla.onclick = function(){
+              tocaSomPom(idAudio);
           }
+          tecla.onkeydown= function(){
+            tecla.classList.add(`ativa`);
+          }
+          tecla.onkeyup = function(){
+            tecla.classList.remove(`ativa`);
+          }
+          console.log(contador)
+          }
+          
       
   
