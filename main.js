@@ -13,7 +13,8 @@ function tocaSomPom(idElementoAudio){
           tecla.onclick = function(){
               tocaSomPom(idAudio);
           }
-          tecla.onkeydown= function(){
+          tecla.onkeydown= function(evento){
+            if(evento.code ==='Enter' || evento.code ==='Space'){
             tecla.classList.add('ativa');
           }
           tecla.onkeyup = function(){
@@ -21,6 +22,8 @@ function tocaSomPom(idElementoAudio){
           }
           console.log(contador)
           }
+          }
+         
 
         
           
