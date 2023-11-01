@@ -3,7 +3,7 @@ function tocaSomPom(idElementoAudio){
 }
     const listaDeTeclas = document.querySelectorA11('.tecla');
 
-      for( let contador = 0; < listaDeTeclas.length;contador++) {
+      for(let contador = 0; contador < listaDeTeclas.length;contador++) {
            const tecla = listaDeTeclas[contador];
            const instrumento = tecla.ClassList[1]
            const idAudio = `#som_${instrumento}`;
@@ -21,6 +21,8 @@ function tocaSomPom(idElementoAudio){
           }
           console.log(contador)
           }
+
+        
           
       
   
