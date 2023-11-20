@@ -3,9 +3,11 @@
 
 function tocaSom(idElementoAudio){
   const elemento = document.querySelector(idElementoAudio);
+//se o elemento pesquisado for igual a 'inexistente', o alerta de elemento não encontrado aparecerá.
   if (elemento === null) {
   alert('Elemento não encontrado');
 };
+//se o elemento existir, a função play daquele elemento acontecerá, ou seja, a tecla será reproduzida.
   if (elemento && elemento.localName === 'audio'){
     elemento.play();
   }else {
@@ -14,6 +16,10 @@ function tocaSom(idElementoAudio){
 }
 //queryselector encontra as informações da tecla pesquisada do documento
 const listaDeTeclas = document.querySelectorAll('.tecla');
+//Estrutura de repetição - Enqunto
+//para que as teclas não sejam repetidas de maneira infinita, criamos o for,com valor de início 0, e valor final chamado de contador < 
+//listaDeTeclas.length, para que a repetição seja exatamente do tamanho da nossa lista, que é de 9 teclas.
+
  //se o elemento pesquisado for igual  a "inexistente", o alerta de elemento não encontrado aparecerá.
 
 
